@@ -8,8 +8,8 @@ import { FirebaseService } from 'src/app/services/iot.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit, OnDestroy {
-  public humidity: number | undefined;
-  public temperature: number | undefined;
+  public humidity!: number;
+  public temperature!: number ;
   public led1: number | undefined;
   public led2: number | undefined;
   public led3: number | undefined;
@@ -34,6 +34,7 @@ export class HomePage implements OnInit, OnDestroy {
   }
 
   updateLedStatus() {
+    
     const newData = {
       led: {
         led1: this.led1,

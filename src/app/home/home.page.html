@@ -1,29 +1,33 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Ionic Firebase Realtime Database Example
-    </ion-title>
+    <ion-title> Ionic Firebase Realtime Database Example </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
   <h2>Humidity: {{ humidity }}</h2>
   <h2>Temperature: {{ temperature }}</h2>
-  
-  <ion-item>
-    <ion-label>LED 1</ion-label>
-    <ion-toggle [(ngModel)]="led1" (ionChange)="updateLedStatus()"></ion-toggle>
-  </ion-item>
-  
-  <ion-item>
-    <ion-label>LED 2</ion-label>
-    <ion-toggle [(ngModel)]="led2" (ionChange)="updateLedStatus()"></ion-toggle>
-  </ion-item>
-  
-  <ion-item>
-    <ion-label>LED 3</ion-label>
-    <ion-toggle [(ngModel)]="led3" (ionChange)="updateLedStatus()"></ion-toggle>
-  </ion-item>
-  
-  <ion-button (click)="refreshData()">Refresh Data</ion-button>
+
+  <ion-img class="imagem" src="../../assets/wavebg.png"></ion-img>
+  <div class="divimg" style="position:absolute; top: 250px; left: 0;">
+    <div class="button-container">
+      <button class="button" (click)="updateLedStatus()">
+        <ion-icon [ngStyle]="{color: led1 ? '#99b6a7' : ''}" name="bulb-outline"></ion-icon>
+        <ion-toggle [(ngModel)]="led1" (ionChange)="updateLedStatus()"></ion-toggle>
+      </button>
+      <button class="button" (click)="updateLedStatus()">
+        <ion-icon [ngStyle]="{color: led2 ? '#99b6a7' : ''}" name="bulb-outline"></ion-icon>
+        <ion-toggle [(ngModel)]="led2" (ionChange)="updateLedStatus()"></ion-toggle>
+      </button>
+
+      <button class="button" (ionChange)="updateLedStatus()">
+        <ion-icon [ngStyle]="{color: led3 ? '#99b6a7' : ''}" name="bulb-outline"></ion-icon>
+        <ion-toggle [(ngModel)]="led3" (ionChange)="updateLedStatus()"></ion-toggle>
+      </button>
+    </div>
+  </div>
+  <div class="temp">
+    <h1 style="font-size: 100px">{{ temperature }}°</h1>
+    <h1 style="margin-bottom: 10%">Temperature</h1>
+  </div>
 </ion-content>

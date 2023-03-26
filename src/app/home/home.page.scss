@@ -1,6 +1,6 @@
 #container {
   text-align: center;
-
+  background-color: #fff;
   position: absolute;
   left: 0;
   right: 0;
@@ -24,4 +24,87 @@
 
 #container a {
   text-decoration: none;
+}
+.image{
+  display: -webkit-inline-flex;
+}
+.temp h1{
+  display: block;
+  margin: 0;
+}
+.divimg{
+  width: -webkit-fill-available;
+}
+.temp{
+  flex-direction: column;
+  align-items: center;
+  display: -webkit-flex;
+  height: fit-content;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  margin: 0%;
+  margin-top: 0%;
+  background-color: #7cb494;
+  
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+ion-toggle {
+  height: 10px;
+  width: 65px;
+
+  padding: 12px;
+
+  --handle-width: 15px;
+  --handle-height: 17px;
+  --handle-max-height: auto;
+  --handle-spacing: 6px;
+
+  /* Required for iOS handle to overflow the height of the track */
+  overflow: visible;
+  contain: none;
+}
+
+ion-toggle::part(track),
+ion-toggle.toggle-checked::part(track) {
+  background: #ddd;
+}
+
+ion-toggle::part(handle) {
+  background: #b7dfc8;
+
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+ion-toggle.toggle-checked::part(handle) {
+  background: #90c8a8;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  flex-direction: column;
+  height: 100px;
+  border-radius: 20px;
+  border: none;
+  margin: 10px;
+  background-color: #e7e9eb;
+}
+span{
+  display: block;
+  font-size: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+ion-icon {
+  color: #fff;
+  font-size: 50px;
 }
